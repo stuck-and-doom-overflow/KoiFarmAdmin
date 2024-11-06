@@ -13,7 +13,7 @@ export default function OrderTableComponent() {
   }, [dispatch]);
 
   return (
-    <div className="overflow-x-auto" style={{ width: "100%" }}>
+    <div className="overflow-x-auto" style={{ width: "100%" ,marginTop:'4%'}}>
       <Table hoverable>
         <Table.Head>
           <Table.HeadCell>Total Quantity</Table.HeadCell>
@@ -22,7 +22,7 @@ export default function OrderTableComponent() {
           <Table.HeadCell>Sale Percent</Table.HeadCell>
           <Table.HeadCell>Shipping Address</Table.HeadCell>
           <Table.HeadCell>Payment method</Table.HeadCell>
-          
+          <Table.HeadCell>Created at</Table.HeadCell>
         </Table.Head>
         <Table.Body className="divide-y">
           {allOrder.map((order) => (
@@ -33,6 +33,12 @@ export default function OrderTableComponent() {
               <Table.Cell>{order.salePercent}</Table.Cell>
               <Table.Cell>{order.shippingAddress}</Table.Cell>
               <Table.Cell>{order.paymentMethod}</Table.Cell>
+
+              <Table.Cell>
+                {order.createdDate
+                  ? new Date(order.createdDate).toISOString().split("T")[0]
+                  : "N/A"}
+              </Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>

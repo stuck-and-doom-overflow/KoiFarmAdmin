@@ -12,14 +12,15 @@ export default function Layout() {
         style={{
           display: "grid",
           gridTemplateColumns: "0.2fr 0.7fr",
-          gap: "4%",
+          gap: "2%",
         }}
       >
         <SidebarComponent />
-        <main>
+        <main >
           <Outlet />
         </main>
       </div>
     </div>
+    // style={{backgroundColor:'#f9fafb'}}
   );
 }

@@ -45,7 +45,7 @@ export default function UserTableComponent() {
   };
 
   return (
-    <div className="overflow-x-auto" style={{ width: "100%" }}>
+    <div className="overflow-x-auto" style={{ width: "100%",marginTop:'4%' }}>
       <Table hoverable>
         <Table.Head>
           <Table.HeadCell>Email</Table.HeadCell>
