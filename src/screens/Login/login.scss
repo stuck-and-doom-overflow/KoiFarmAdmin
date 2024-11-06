@@ -1,0 +1,12 @@
+.login__main {
+	background-image: url("../../assets/img/bg.jpg");
+	background-size: cover;       // Ensures the image covers the full div
+	background-position: center;   // Centers the image
+	background-repeat: no-repeat;  // Prevents the image from repeating
+	height: 100vh;                 // Sets height to 100% of viewport height
+	width: 100vw;                  // Sets width to 100% of viewport width
+	display: flex;                 // Centers any content inside (if needed)
+	align-items: center;           // Centers content vertically (optional)
+	justify-content: center;       // Centers content horizontally (optional)
+  }
+  
